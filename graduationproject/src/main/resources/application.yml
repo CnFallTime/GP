@@ -9,8 +9,8 @@ spring:
     url: jdbc:mysql://your DB address/bysj?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8
     driver-class-name: com.mysql.cj.jdbc.Driver
   mail:
-    username: 304711385@qq.com
-    password: icjjhymtouqdbhfb
+    username: your e-mail address
+    password: your e-mail token
     host: smtp.qq.com
     properties:
       mail:
