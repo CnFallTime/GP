@@ -1,0 +1,19 @@
+server:
+  port: 8081
+spring:
+  thymeleaf:
+    cache: false
+  datasource:
+    username: root
+    password: 6113081
+    url: jdbc:mysql://8.136.39.89:3307/bysj?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  mail:
+    username: 304711385@qq.com
+    password: icjjhymtouqdbhfb
+    host: smtp.qq.com
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true

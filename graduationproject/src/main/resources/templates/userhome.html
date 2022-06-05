@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="asserts/css/style6.css" th:href="@{/asserts/css/style6.css}">
+    <link rel="stylesheet" href="asserts/css/all.css" th:href="@{/asserts/css/all.css}">
+    <script src="asserts/js/jquery.min.js" th:href="@{/asserts/js/jquery.min.js}"></script>
+</head>
+<body>
+<p></p>
+<div class="hide-login-btn" id="back">
+    <i class="fas fa-times-circle"></i>
+</div>
+<form class="table" action="" method="post">
+    <h1>管理员信息修改操作</h1>
+    <input type="hidden" name="id" value="${u.id }"> <input
+        type="text" name="name" value="" placeholder="管理员姓名:${u.name }" required="required"> <input
+        type="text" name="password" value="" placeholder="管理员密码:${u.pwd }" required="required"> <input
+        type="text" name="email" value="" placeholder="联系电话:${u.tel }" required="required"> <input
+        type="text" name="tel" value="" placeholder="家庭地址:${u.address }" required="required"> <input
+        type="submit" value="修改"><input type="reset" value="恢复">
+</form>
+</body>
+</html>
+<script type="text/javascript">
+    $(".hide-login-btn").on("click", function() {
+        $(".login-box").toggleClass("showed");
+        window.location.href = 'seach.jsp';
+    })
+</script>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>关于bootstrap</title>
+    <!-- Bootstrap -->
+    <link href="asserts/more/css/bootstrap.min.css" th:href="@{/asserts/more/css/bootstrap.min.css}" rel="stylesheet">
+    <link href="asserts/vendor/simple-line-icons/css/simple-line-icons.css" th:href="@{/asserts/vendor/simple-line-icons/css/simple-line-icons.css}" rel="stylesheet">
+    <!-- main css -->
+    <link href="asserts/vendor/fontawesome-free/css/all.min.css" th:href="@{/asserts/vendor/fontawesome-free/css/all.min.css}" rel="stylesheet" >
+    <link href="/asserts/more/css/bpstyle.css" th:href="@{/asserts/more/css/bpstyle.css}" rel="stylesheet">
+    <link href="../../static/asserts/css/stylish-portfolio.min.css" th:href="@{/static/asserts/css/stylish-portfolio.min.css}" rel="stylesheet">
+
+    <!-- modernizr -->
+    <script src="asserts/more/js/modernizr.js" th:src="@{/asserts/more/js/modernizr.js}"></script>
+
+</head>
+
+<body>
+<a class="menu-toggle rounded" href="#">
+    <i class="fas fa-bars"></i>
+</a>
+<!--<a class="menu-toggle2 rounded" href="#">
+  <i class="fas fa-bars"></i>
+</a>-->
+<nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+            <a class="js-scroll-trigger" href="#" th:href="@{/update}"><h3 style="color: white">[[${session.LoginUser.name}]]</h3></a>
+        </li>
+        <li class="sidebar-nav-item">
+            <a class="js-scroll-trigger" href="#" th:href="@{/home}">主页</a>
+        </li>
+        <li class="sidebar-nav-item">
+            <a class="js-scroll-trigger" href="" th:href="@{/vippage/post}">用户留言</a>
+        </li>
+        <li class="sidebar-nav-item">
+            <a class="js-scroll-trigger" href="" th:href="@{/vippage/contact}">提问</a>
+        </li>
+        <li class="sidebar-nav-item">
+            <a class="js-scroll-trigger" href="" th:href="@{/loginout}">退出博客</a>
+        </li>
+    </ul>
+</nav>
+
+<!-- Preloader -->
+<div id="preloader">
+    <div class="pre-container">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+</div>
+<!-- end Preloader -->
+
+<div class="container-fluid">
+
+    <!-- box-intro -->
+    <section class="box-intro">
+        <div class="table-cell">
+            <h1 class="box-headline letters rotate-2">
+                    <span class="box-words-wrapper">
+                        <b class="is-visible">这是项目展示页.</b>
+                        <b>前端BootStrap.</b>
+                        <b>后端SpringBoot.</b>
+                    </span>
+            </h1>
+            <h5>核心动力@张昊 032020304</h5>
+        </div>
+
+        <div class="mouse">
+            <div class="scroll"></div>
+        </div>
+    </section>
+    <!-- end box-intro -->
+</div>
+
+<!-- portfolio div -->
+<div class="portfolio-div">
+    <div class="portfolio">
+        <div class="no-padding portfolio_container">
+            <!-- single work -->
+            <div class="col-md-3 col-sm-6  fashion logo">
+                <a href="https://www.bootcss.com/" class="portfolio_item">
+                    <img src="asserts/more/img/bp01.jpg" th:src="@{/asserts/more/img/portfolio/bp01.jpg}" alt="image" class="img-responsive" />
+                    <div class="portfolio_item_hover">
+                        <div class="portfolio-border clearfix">
+                            <div class="item_info">
+                                <span>Bootstrap中文社区</span>
+                                <em>进入</em>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- end single work -->
+
+            <!-- single work -->
+            <div class="col-md-3 col-sm-6 ads graphics">
+                <a href="https://www.youzhan.org/" class="portfolio_item">
+                    <img src="asserts/more/img/bp03.jpg" th:src="@{/asserts/more/img/portfolio/bp03.jpg}" alt="image" class="img-responsive" />
+                    <div class="portfolio_item_hover">
+                        <div class="portfolio-border clearfix">
+                            <div class="item_info">
+                                <span>Bootstrap案例</span>
+                                <em>进入</em>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- end single work -->
+
+            <!-- single work -->
+            <div class="col-md-6 col-sm-12 photography">
+                <a href="#" th:href="@{/vippage/post}" class="portfolio_item">
+                    <img src="asserts/more/img/bp02.jpg" th:src="@{/asserts/more/img/portfolio/bp02.jpg}" alt="image" class="img-responsive" />
+                    <div class="portfolio_item_hover">
+                        <div class="portfolio-border clearfix">
+                            <div class="item_info">
+                                <span>Bootstrap问答</span>
+                                <em>进入</em>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- end single work -->
+
+            <!-- single work -->
+            <div class="col-md-3 col-sm-6 fashion ads">
+                <a href="https://baike.baidu.com/item/Bootstrap/8301528?fr=aladdin" class="portfolio_item">
+                    <img src="asserts/more/img/bp04.jpg" th:src="@{/asserts/more/img/portfolio/bp04.jpg}" alt="image" class="img-responsive" />
+                    <div class="portfolio_item_hover">
+                        <div class="portfolio-border clearfix">
+                            <div class="item_info">
+                                <span>Bootstrap百度百科</span>
+                                <em>进入</em>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- end single work -->
+
+            <!-- single work -->
+            <div class="col-md-3 col-sm-6 graphics ads">
+                <a href="https://www.runoob.com/bootstrap/bootstrap-tutorial.html" class="portfolio_item">
+                    <img src="asserts/more/img/bp05.jpg" th:src="@{/asserts/more/img/portfolio/bp05.jpg}" alt="image" class="img-responsive" />
+                    <div class="portfolio_item_hover">
+                        <div class="portfolio-border clearfix">
+                            <div class="item_info">
+                                <span>Bootstrap使用教程</span>
+                                <em>进入</em>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- end single work -->
+        </div>
+        <!-- end portfolio_container -->
+    </div>
+    <!-- portfolio -->
+</div>
+<!-- end portfolio div -->
+
+<!-- footer -->
+<footer>
+    <div class="container-fluid">
+        <p class="copyright"><a href="#" title="bootstrap" target="_blank">毕业设计</a> @ <a href="#" target="_blank" title="bootstrap">张昊</a> 032020304</p>
+    </div>
+</footer>
+<!-- end footer -->
+
+<!-- back to top -->
+<a href="#0" class="cd-top"><i class="fas fa-angle-up"></i></a>
+<!-- end back to top -->
+
+
+
+<!-- jQuery -->
+<script src="asserts/more/js/jquery-2.1.1.js" th:src="@{/asserts/more/js/jquery-2.1.1.js}"></script>
+<!--  plugins -->
+<script src="asserts/more/js/bootstrap.min.js" th:src="@{/asserts/more/js/bootstrap.min.js}"></script>
+<script src="asserts/more/js/menu.js" th:src="@{/asserts/more/js/menu.js}"></script>
+<script src="asserts/more/js/animated-headline.js" th:src="@{/asserts/more/js/animated-headline.js}"></script>
+<script src="asserts/more/js/isotope.pkgd.min.js" th:src="@{/asserts/more/js/isotope.pkgd.min.js}"></script>
+<!--  custom script -->
+<script src="asserts/js/custom.js" th:src="@{/asserts/more/js/custom.js}"></script>
+<script src="asserts/vendor/jquery-easing/jquery.easing.min.js" th:src="@{/asserts/vendor/jquery-easing/jquery.easing.min.js}"></script>
+<!-- Custom scripts for this template -->
+<script src="asserts/js/stylish-portfolio.min.js" th:src="@{/asserts/js/stylish-portfolio.min.js}"></script>
+<script src="asserts/js/mbar.js" th:src="@{/asserts/js/mbar.js}"></script>
+
+
+</body>
+
+</html>

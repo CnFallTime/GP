@@ -1,0 +1,122 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background-image: linear-gradient(125deg,#2ecc71,#ffb8b8,#ff9f1a,#7158e2);
+	background-size: 400%;
+	animation: bga 15s infinite;
+}
+.table{
+	width: 300px;
+	padding: 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background: #191919;
+	text-align: center;
+}
+.table h1{
+	color: white;	
+	text-transform: uppercase;
+	font-weight: 500;
+}
+.table input[type="text"],.box input[type="password"]{
+	border: 0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #3498db;
+	padding: 14px 10px;
+	width: 200px;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s;
+}
+.table input[type="text"]:focus,.table input[type="password"]:focus{
+	width: 280px;
+	border-color: #2ecc71;
+}
+.table input[type="submit"]{
+	border: 0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #2ecc71;
+	padding: 14px 40px;
+
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s;
+	cursor: pointer;
+}
+.table input[type="submit"]:hover{
+	background: #2ecc71;
+}
+.table input[type="reset"]{
+	border: 0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #2ecc71;
+	padding: 14px 40px;
+
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s;
+	cursor: pointer;
+}
+.table input[type="reset"]:hover{
+	background: #2ecc71;
+}
+.hide-login-btn{
+	color: #000;
+	position: absolute;
+	top: 40px;
+	right: 40px;
+	cursor: pointer;
+	font-size: 24px;
+	opacity: .7;
+}
+.table input[type="file"] {
+    width: 0.1px; 
+    height: 0.1px; 
+    opacity: 0; 
+    overflow: hidden; 
+    position: absolute; 
+    z-index: -1;
+}
+.table label{
+	width: 50px;
+	background: #e74c3c;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #e74c3c;
+	padding: 14px 40px;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s;
+	cursor: pointer;
+}
+.table label:hover{
+	background: #e74c3c;
+}
+@keyframes bga{
+	0%{
+		background-position: 0% 50%;
+	}
+	50%{
+		background-position: 100% 50%;
+	}
+	100%{
+		background-position: 0% 50%;
+	}
+}

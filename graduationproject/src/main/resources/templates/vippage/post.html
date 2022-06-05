@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>留言板</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../../static/asserts/vendor/bootstrap/css/bootstrap.min.css" th:href="@{/static/asserts/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="../../static/asserts/vendor/fontawesome-free/css/all.min.css" th:href="@{/static/asserts/vendor/fontawesome-free/css/all.min.css}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../../static/asserts/css/clean-blog.min.css" th:href="@{/static/asserts/css/clean-blog.min.css}" rel="stylesheet">
+    <link href="../../static/asserts/css/stylish-portfolio.min.css" th:href="@{/static/asserts/css/stylish-portfolio.min.css}" rel="stylesheet">
+
+</head>
+
+<body>
+<a class="menu-toggle rounded" href="#">
+    <i class="fas fa-bars"></i>
+</a>
+<!--<a class="menu-toggle2 rounded" href="#">
+  <i class="fas fa-bars"></i>
+</a>-->
+<nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+            <a class="js-scroll-trigger" href="" th:href="@{/update}">[[${session.LoginUser.name}]]</a>
+        </li>
+        <li class="sidebar-nav-item">
+            <a class="js-scroll-trigger" href="" th:href="@{/home}">主页</a>
+        </li>
+        <li class="sidebar-nav-item">
+            <a class="js-scroll-trigger" th:href="@{/bootstrap}">BootStrap综合展示</a>
+        </li>
+        <li class="sidebar-nav-item">
+            <a class="js-scroll-trigger" th:href="@{/vippage/contact}">提问</a>
+        </li>
+        <li class="sidebar-nav-item" >
+            <a class="js-scroll-trigger" href="" th:href="@{/loginout}">退出博客</a>
+        </li>
+    </ul>
+</nav>
+<!-- Page Header -->
+
+<header class="masthead" style="background-image: url('../../static/asserts/img/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h1>留言</h1>
+                    <span class="subheading">采用Bootstrap框架设计留言板</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-preview" th:each="emp:${emps}">
+                <a href="#">
+
+                    <h3 class="post-subtitle">
+                        [[${emp.text}]]
+                    </h3>
+                </a>
+                <p class="post-meta">留言来自
+                    <a href="#">[[${emp.name}]]</a>
+                    [[${emp.email}]]</p>
+                <hr>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <ul class="list-inline text-center">
+                    <li class="list-inline-item">
+                        <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                </span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+                        </a>
+                    </li>
+                </ul>
+                <p class="copyright text-muted">毕业设计 @ 张昊  032020304</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js" th:src="@{/static/asserts/vendor/jquery/jquery.min.js}"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js" th:src="@{/static/asserts/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+
+<!-- Custom scripts for this template -->
+<script src="js/clean-blog.min.js" th:src="@{/static/asserts/js/clean-blog.min.js}"></script>
+<script src="../../static/asserts/vendor/jquery-easing/jquery.easing.min.js" th:src="@{/static/asserts/vendor/jquery-easing/jquery.easing.min.js}"></script>
+<!-- Custom scripts for this template -->
+<script src="../../static/asserts/js/stylish-portfolio.min.js" th:src="@{/static/asserts/js/stylish-portfolio.min.js}"></script>
+<script src="../../static/asserts/js/mbar.js" th:src="@{/static/asserts/js/mbar.js}"></script>
+
+</body>
+
+</html>

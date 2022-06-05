@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>登录</title>
+    <link rel="icon" type="image/x-icon" href="asserts/img/3.jpg" th:href="@{/asserts/img/3.jpg}"/>
+    <link rel="stylesheet" href="asserts/css/style2.css" th:href="@{/asserts/css/style2.css}">
+    <link rel="stylesheet" href="asserts/css/all.css" th:href="@{/asserts/css/all.css}">
+    <script src="asserts/js/jquery.min.js" th:href="@{/asserts/js/jquery.min.js}"></script>
+</head>
+<body>
+<div class="show-login-btn">
+    <i class="fas fa-sign-in-alt"></i> 单击登录 Login From
+</div>
+<div class="show-sigin-btn">
+    <i class="fas fa-registered"></i> 单击注册 Registered
+</div>
+<div class="login-box">
+    <div class="hide-login-btn">
+        <i class="fas fa-times-circle"></i>
+    </div>
+    <form class="login-form" th:action="@{/user/login}" th:method="post">
+        <h1>请登录</h1>
+        <input type="text" name="mail" placeholder="E-Mail" required="required"> <input
+            type="password" name="password" placeholder="Password" required="required">
+        <p style="color: red" th:text="${msg}" th:if="${ not #strings.isEmpty(msg)}"></p>
+        <input type="submit" name="" value="登录">
+    </form>
+</div>
+<div class="sigin-box">
+    <div class="hide-sigin-btn">
+        <i class="fas fa-times-circle"></i>
+    </div>
+    <form class="login-form" th:action="@{/user/zhuce}" th:method="post">
+        <h1>注册</h1>
+        <input type="text" name="name" placeholder="Username" required="required">
+        <input type="password" name="password" placeholder="Password" required="required">
+        <input type="text" name="email" placeholder="E-Mail" required="required">
+        <input type="text" name="tel" placeholder="tel" required="required">
+        <input type="submit" name="" value="提交">
+    </form>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    $(".show-login-btn").on("click",function(){
+        $(".login-box").toggleClass("showed");
+    });
+    $(".hide-login-btn").on("click",function(){
+        $(".login-box").toggleClass("showed");
+    })
+    $(".show-sigin-btn").on("click",function(){
+        $(".sigin-box").toggleClass("showed2");
+    });
+    $(".hide-sigin-btn").on("click",function(){
+        $(".sigin-box").toggleClass("showed2");
+    })
+</script>
